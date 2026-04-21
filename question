@@ -1,0 +1,134 @@
+1. What is Android?
+
+Android is an open-source, Linux-based mobile operating system developed by Google for smartphones, tablets, TVs, and wearables.
+
+Key Points:
+Based on Linux Kernel
+Used to build mobile apps using Java / Kotlin
+Apps run inside Android Runtime (ART)
+Supports touch-based UI
+Features of Android
+Open Source – Anyone can modify it
+Multitasking – Run multiple apps at once
+Custom UI – Widgets, themes, launchers
+Connectivity – WiFi, Bluetooth, NFC, 4G/5G
+App Framework – Easy app development
+Media Support – Audio, video, images
+Google Services – Maps, Gmail, Play Store
+Security – App sandboxing + permissions
+Multi-language support
+Android Versions (Important Ones)
+Version	Name	Year
+1.5	Cupcake	2009
+2.3	Gingerbread	2010
+4.0	Ice Cream Sandwich	2011
+5.0	Lollipop	2014
+6.0	Marshmallow	2015
+7.0	Nougat	2016
+8.0	Oreo	2017
+9	Pie	2018
+10	Android 10	2019
+11	Android 11	2020
+12	Android 12	2021
+13	Android 13	2022
+14	Android 14	2023
+
+👉 New versions dropped dessert names publicly after Android 9.
+---------------------------------------------------------------------------
+2. What is Framework?
+
+A framework is a predefined structure (tools + libraries) that helps developers build applications faster without writing everything from scratch.
+
+Android Framework (Architecture)
+5
+Layers:
+Linux Kernel
+Hardware interaction (camera, memory, drivers)
+Libraries + Android Runtime (ART)
+Core libraries (SQLite, WebKit)
+Runs apps efficiently
+Application Framework
+Activity Manager
+Window Manager
+Content Providers
+View System
+Applications
+User apps (WhatsApp, Instagram)
+
+👉 Framework gives APIs to interact with lower layers.
+---------------------------------------------------------------------------
+3. Android Activity Life Cycle
+6
+Definition:
+
+Activity lifecycle = states an activity goes through during its lifetime
+
+Methods:
+onCreate()
+→ Activity created (UI initialized)
+onStart()
+→ Activity becomes visible
+onResume()
+→ User can interact (foreground)
+onPause()
+→ Partially hidden (incoming call etc.)
+onStop()
+→ Fully hidden
+onDestroy()
+→ Activity destroyed
+onRestart()
+→ Restart after stop
+Flow:
+onCreate → onStart → onResume
+   ↓
+onPause → onStop → onDestroy
+---------------------------------------------------------------------------
+4. Layouts in Android
+7
+Layout = Structure of UI
+Types of Layouts:
+1. LinearLayout
+Arranges elements vertically or horizontally
+2. RelativeLayout
+Position relative to other views
+3. ConstraintLayout (MOST IMPORTANT)
+Flexible, modern layout
+Uses constraints
+4. FrameLayout
+Single view / overlapping views
+5. TableLayout
+Rows and columns like table
+
+---------------------------------------------------------------------------
+5. Views and Pickers
+Views
+
+Views = UI components (basic building blocks)
+
+Examples:
+TextView → displays text
+EditText → user input
+Button → clickable
+ImageView → shows image
+CheckBox → multiple selection
+RadioButton → single selection
+Pickers
+
+Pickers = UI components to select values
+
+Types:
+DatePicker
+→ Select date
+TimePicker
+→ Select time
+NumberPicker
+→ Select number
+Spinner
+→ Dropdown selection
+Quick Viva Summary (VERY IMPORTANT)
+Android = Linux-based mobile OS by Google
+Framework = Ready-made structure for development
+Activity lifecycle = states (onCreate → onDestroy)
+Layout = UI structure (Linear, Constraint etc.)
+Views = UI elements (Button, TextView)
+Pickers = selection tools (Date, Time)
