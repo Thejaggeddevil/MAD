@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Graphics">
         <activity
-        android:name=".GraphicsActivity"
+            android:name=".GraphicsActivity"
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

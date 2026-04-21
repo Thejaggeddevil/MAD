@@ -1,4 +1,4 @@
-package com.mansi.login;
+package com.mansi.graphics;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,7 +9,7 @@ public class GraphicsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        com.mansi.login.MyView view = new com.mansi.login.MyView(this);
+        com.mansi.graphics.MyView view = new com.mansi.graphics.MyView(this);
         setContentView(view);
     }
 }
