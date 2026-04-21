@@ -2,43 +2,56 @@ package com.mansi.graphics;
 
 import android.content.Context;
 import android.graphics.*;
+import android.view.MotionEvent;
 import android.view.View;
 
 public class MyView extends View {
 
     Paint paint;
+    Path path;
 
     public MyView(Context context) {
         super(context);
 
         paint = new Paint();
-        paint.setAntiAlias(true); // smooth edges
+        paint.setColor(Color.BLUE);
+        paint.setStrokeWidth(8);
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setAntiAlias(true);
+
+        path = new Path();
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        // Background color
         canvas.drawColor(Color.WHITE);
 
-        // 🔴 LINE
-        paint.setColor(Color.RED);
-        paint.setStrokeWidth(8);
-        canvas.drawLine(100, 150, 800, 150, paint);
+        // Draw the path (your drawing)
+        canvas.drawPath(path, paint);
+    }
 
-        // 🔵 RECTANGLE (filled)
-        paint.setColor(Color.BLUE);
-        paint.setStyle(Paint.Style.FILL);
-        canvas.drawRect(100, 200, 600, 400, paint);
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
 
-        // 🟢 CIRCLE
-        paint.setColor(Color.GREEN);
-        canvas.drawCircle(350, 600, 120, paint);
+        float x = event.getX();
+        float y = event.getY();
 
-        // 🟡 TEXT (bonus marks)
-        paint.setColor(Color.BLACK);
-        paint.setTextSize(60);
-        canvas.drawText("Graphics Demo", 100, 800, paint);
+        switch (event.getAction()) {
+
+            case MotionEvent.ACTION_DOWN:
+                path.moveTo(x, y);
+                return true;
+
+            case MotionEvent.ACTION_MOVE:
+                path.lineTo(x, y);
+                break;
+        }
+
+        // Refresh screen
+        invalidate();
+
+        return true;
     }
 }

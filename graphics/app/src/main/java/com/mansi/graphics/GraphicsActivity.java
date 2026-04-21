@@ -9,7 +9,7 @@ public class GraphicsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        com.mansi.graphics.MyView view = new com.mansi.graphics.MyView(this);
+        MyView view = new MyView(this);
         setContentView(view);
     }
 }
